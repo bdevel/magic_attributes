@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   include MagicAttributes
   
   magic_attributes(last_post_created_at: [:posts, :last, :created_at],
-                   full_name: -> (user) {"#{user.first_name} #{user.last_name}}
+                   full_name: -> (user) {"#{user.first_name} #{user.last_name}"}
                   )
 
 end
