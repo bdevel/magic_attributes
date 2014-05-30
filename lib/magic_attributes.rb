@@ -27,6 +27,11 @@ module MagicAttributes
           define_method(attr_name) do
             attrs[attr_name].call(self)
           end 
+        else
+          # Else just return the value
+          define_method(attr_name) do
+            attrs[attr_name]
+          end 
         end
       end
       

@@ -55,6 +55,22 @@ describe MagicAttributes do
     assert_equal '!SEY', my_a.c_value_reversed
   end
   
+  it "should return the value if not an array or a Proc" do
+    class MyA < A
+      include MagicAttributes
+      magic_attributes(:a_string => 'My String',
+                       :a_numeric => 33.0,
+                       :a_hash => {:foo => 'bar'}
+                       )
+    end
+    my_a = MyA.new
+    assert_equal 'My String', my_a.a_string
+    assert_equal 33.0, my_a.a_numeric
+    assert_equal( {:foo => 'bar'}, my_a.a_hash)
+  end
+  
+  
+  
   
 end
 
