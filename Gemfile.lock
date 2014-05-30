@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    magic_attributes (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.3.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  magic_attributes!
+  minitest
